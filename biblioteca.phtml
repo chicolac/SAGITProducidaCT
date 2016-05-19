@@ -1,0 +1,408 @@
+<!-- Factorar código -->
+
+<?php 
+	function estilo()
+	{
+?>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+
+	        <link rel="shortcut icon" href="imagenes/favicon.ico">
+	        <link rel="stylesheet" type="text/css" media="screen" href="css/en_original.css">
+	        <link rel="stylesheet" type="text/css" media="screen" href="css/main_principal.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/menu.css">
+		
+		<link rel="stylesheet" type="text/css" href="../mi_ficha/main.css"> 
+		<link rel="STYLESHEET" type="text/css" href="../mi_ficha/estilo.css">
+		<!-- comentario en HTML -->
+<?php
+	}
+	
+	function estiloAdentro()
+	{
+?>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		
+	        <link rel="shortcut icon" href="../imagenes/favicon.ico">
+	        <link rel="stylesheet" type="text/css" media="screen" href="../css/en_original.css"> 
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/main_principal.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/menu.css">		
+
+		<link rel="stylesheet" type="text/css" href="../mi_ficha/main.css"> 
+		<link rel="STYLESHEET" type="text/css" href="../mi_ficha/estilo.css">
+		
+		<!-- comentario en HTML -->
+<?php
+	}
+
+	function cabeceraPage()
+	{
+?>
+		<div class="cabeza1" > 
+			<img src="fotos/LOGO_TURISMO.png" name="foto" id="foto" alt="mis fotos" height="120" / > 
+		</div >
+	
+		<div class="cabeza2" > 
+			<div class="cabezita" > 
+				Facultad de Arquitectura y Ciencias del H&aacute;bitat
+			</div >
+			<div class="cabezota" > 
+				CARRERA DE TURISMO
+			</div >
+		</div >
+<?php
+	}
+
+	function cabeceraPageIn()
+	{
+?>
+		<div class="cabeza1" > 
+			<img src="../fotos/LOGO_TURISMO.png" name="foto" id="foto" alt="mis fotos" height="120" / > 
+		</div >
+	
+		<div class="cabeza2" > 
+			<div class="cabezita" > 
+				Facultad de Arquitectura y Ciencias del H&aacute;bitat
+			</div >
+			<div class="cabezota" > 
+				CARRERA DE TURISMO
+			</div >
+		</div >
+<?php
+	}
+	
+	function piePage()
+	{
+?>
+		<p><small> La Carrera de Turismo perteneciente a la Facultad de Arquitectura de la Universidad Mayor de San Simón! - Telf:4540438 - Email:turismo@arq.umss.edu.bo</small></p>
+		<p><small>Cochabamba - Bolivia</small></p>
+		<a href="index.php"><img src="turismo.png" alt="Carrera de Turismo"></a>
+<?php
+	}
+
+	function piePageIn()
+	{
+?>
+		<p><small> La Carrera de Turismo perteneciente a la Facultad de Arquitectura de la Universidad Mayor de San Simón! - Telf:4540438 - Email:turismo@arq.umss.edu.bo</small></p>
+		<p><small>Cochabamba - Bolivia</small></p>
+		<a href="../index.php"><img src="turismo.png" alt="Carrera de Turismo"></a>	
+<?php
+	}
+	
+	function elMenu()
+	{
+?>
+		<ul id="menu" class="topmenu"> 
+			<li class="topfirst">
+				<a class="pressed" href="index.php" title="Inicio" style="height: 18px; line-height: 18px;">Inicio </a>
+			</li>
+			<li>
+				<a href="index.php" title="La Carrera" style="height: 18px; line-height: 18px;">
+					<span>La Carrera</span>
+				</a>
+				<ul>
+					<li>
+						<a href="historia.php" title="Historia">Historia</a>
+					</li>
+					<li>
+						<a href="acerca.php" title="Ex Directores">Acerca de la Carrera</a>
+					</li>
+					<li>
+						<a href="organizacion.php" title="Antecedentes Acad?micos">Organizaci?n administrativa</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" title="Informacion Academica" style="height: 18px; line-height: 18px;">
+					<span>Informacion Academica</span>
+				</a>
+				<ul>
+					<li>
+						<a href="mod_ad.php" title=" Modalidad de Admision "> Modalidades de Admisi&oacute;n </a>
+					</li>
+					<li>
+						<a href="mod_ti.php" title=" Reglamento "> Modalidades de titulaci&oacute;n</a>
+					</li>
+					<li>
+						<a href="perfil.php" title="Perfil profesional  ">Perfil profesional  </a>
+					</li>
+					<li>
+						<a href="plantel.php" title="Plantel docente ">Plantel docente </a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="publicaciones.php" title="Publicaciones" style="height: 18px; line-height: 18px;">
+					<span>Publicaciones</span>
+				</a>
+			</li>
+			<li>
+				<a href="las_noticias.php" title="Turismo" style="height: 18px; line-height: 18px;">
+					<span>&Uacute;ltimas noticias</span>
+				</a>
+			</li>
+			<li>
+				<a href="index.php" title="Turismo" style="height: 18px; line-height: 18px;">
+					<span>Actividades tur&iacute;sticas</span>
+				</a>
+				<ul>
+					<li>
+						<a href="index.php" title="Aventura">turismo de aventura</a>
+					</li>
+					<li>
+						<a href="index.php" title="Canotaje y navegación">canotaje y navegaci&oacute;n</a>
+					</li>
+					<li>
+						<a href="index.php" title="Guiadas">guiadas</a>
+					</li>
+					<li>
+						<a href="index.php" title="Tracking de caminata">tracking de caminata</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="index.php" title="Informaci&oacute;n tur&iacute;stica" style="height: 18px; line-height: 18px;">
+					<span>Informaci&oacute;n tur&iacute;stica</span>
+				</a>
+				<ul>
+					<li>
+						<a href="cochamenu.php" title="Ver Cochabamba">Cochabamba</a>
+					</li>
+					<li>
+						<a href="bolivia.php" title="Ver Bolivia">Bolivia</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="index.php" title="Apoyo docente-estudiantil" style="height: 18px; line-height: 18px;">
+					<span>Apoyo docente-estudiantil</span>
+				</a>
+				<ul>
+					<li>
+						<a href="http://enlinea.umss.edu.bo/claroline/" title="Claroline">Claroline</a>
+					</li>
+					<li>
+						<a href="index.php" title="Tesis">Tesis</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/CarreraDeTurismoUMSS" title="Nuestro face">Facebook </a>
+					</li>
+				</ul>
+			</li>
+	
+		<?php
+			if(isset($_SESSION['usuario'])){
+					echo '
+			<li>
+				<a href="index.php" title="Men&uacute; del administrador" style="height: 18px; line-height: 18px;">
+					<span>Men&uacute; del administrador</span>
+				</a>
+				<ul>
+					<li>
+						<a href="catalogs/catalogo.php" title="Clasificar atractivos">Clasificar atractivos tur&iacute;sticos</a>
+					</li>
+					<li>
+						<a href="usuarios/formularioaltausuario.php" title="administraci&oacute;n usuarios">No eres usuario todavia? Pues pulsa AQUI</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/CarreraDeTurismoUMSS" title="Divisi&oacute;n pol&iacute;tica">Divisi&oacute;n pol&iacute;tica</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/CarreraDeTurismoUMSS" title="Atractivos tur&iacute;sticos">Atractivos tur&iacute;sticos</a>
+					</li>
+				</ul>
+			</li>
+			';
+		}
+		?>
+
+	<!-- el último </ul> -->
+		</ul>
+			<?php
+		
+			if(isset($_SESSION['usuario'])){
+
+			echo'
+
+			<div id="terminar_sesion">
+				Pulsa
+				<a href="usuarios/unlog.php">AQUI</a>
+				para cerrar tu sesion
+			</div>
+
+			';
+
+			}
+
+			else {echo'
+
+			<div id="iniciar_sesion">
+				<a href="formulariologin.php">Iniciar <br /> sesi&oacute;n</a>
+			</div>
+
+			';}
+
+
+			?>		
+<?php
+	}
+
+	function elMenuIn()
+	{
+?>
+		<ul id="menu" class="topmenu"> 
+			<li class="topfirst">
+				<a class="pressed" href="../index.php" title="Inicio" style="height: 18px; line-height: 18px;">Inicio </a>
+			</li>
+			<li>
+				<a href="../index.php" title="La Carrera" style="height: 18px; line-height: 18px;">
+					<span>La Carrera</span>
+				</a>
+				<ul>
+					<li>
+						<a href="../historia.php" title="Historia">Historia</a>
+					</li>
+					<li>
+						<a href="../acerca.php" title="Ex Directores">Acerca de la Carrera</a>
+					</li>
+					<li>
+						<a href="../organizacion.php" title="Antecedentes Acad?micos">Organizaci?n administrativa</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" title="Informacion Academica" style="height: 18px; line-height: 18px;">
+					<span>Informacion Academica</span>
+				</a>
+				<ul>
+					<li>
+						<a href="../mod_ad.php" title=" Modalidad de Admision "> Modalidades de Admisi&oacute;n </a>
+					</li>
+					<li>
+						<a href="../mod_ti.php" title=" Reglamento "> Modalidades de titulaci&oacute;n</a>
+					</li>
+					<li>
+						<a href="../perfil.php" title="Perfil profesional  ">Perfil profesional  </a>
+					</li>
+					<li>
+						<a href="../plantel.php" title="Plantel docente ">Plantel docente </a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="../publicaciones.php" title="Publicaciones" style="height: 18px; line-height: 18px;">
+					<span>Publicaciones</span>
+				</a>
+			</li>
+			<li>
+				<a href="../las_noticias.php" title="Turismo" style="height: 18px; line-height: 18px;">
+					<span>&Uacute;ltimas noticias</span>
+				</a>
+			</li>
+			<li>
+				<a href="../index.php" title="Turismo" style="height: 18px; line-height: 18px;">
+					<span>Actividades tur&iacute;sticas</span>
+				</a>
+				<ul>
+					<li>
+						<a href="../index.php" title="Aventura">turismo de aventura</a>
+					</li>
+					<li>
+						<a href="../index.php" title="Canotaje y navegación">canotaje y navegaci&oacute;n</a>
+					</li>
+					<li>
+						<a href="../index.php" title="Guiadas">guiadas</a>
+					</li>
+					<li>
+						<a href="../index.php" title="Tracking de caminata">tracking de caminata</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="../index.php" title="Informaci&oacute;n tur&iacute;stica" style="height: 18px; line-height: 18px;">
+					<span>Informaci&oacute;n tur&iacute;stica</span>
+				</a>
+				<ul>
+					<li>
+						<a href="../cochamenu.php" title="Ver Cochabamba">Cochabamba</a>
+					</li>
+					<li>
+						<a href="../bolivia.php" title="Ver Bolivia">Bolivia</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="../index.php" title="Apoyo docente-estudiantil" style="height: 18px; line-height: 18px;">
+					<span>Apoyo docente-estudiantil</span>
+				</a>
+				<ul>
+					<li>
+						<a href="http://enlinea.umss.edu.bo/claroline/" title="Claroline">Claroline</a>
+					</li>
+					<li>
+						<a href="../index.php" title="Tesis">Tesis</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/CarreraDeTurismoUMSS" title="Nuestro face">Facebook </a>
+					</li>
+				</ul>
+			</li>
+	
+		<?php
+			if(isset($_SESSION['usuario'])){
+					echo '
+			<li>
+				<a href="../index.php" title="Men&uacute; del administrador" style="height: 18px; line-height: 18px;">
+					<span>Men&uacute; del administrador</span>
+				</a>
+				<ul>
+					<li>
+						<a href="../catalogs/catalogo.php" title="Clasificar atractivos">Clasificar atractivos tur&iacute;sticos</a>
+					</li>
+					<li>
+						<a href="../usuarios/formularioaltausuario.php" title="administraci&oacute;n usuarios">No eres usuario todavia? Pues pulsa AQUI</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/CarreraDeTurismoUMSS" title="Divisi&oacute;n pol&iacute;tica">Divisi&oacute;n pol&iacute;tica</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/CarreraDeTurismoUMSS" title="Atractivos tur&iacute;sticos">Atractivos tur&iacute;sticos</a>
+					</li>
+				</ul>
+			</li>
+			';
+		}
+		?>
+
+	<!-- el último </ul> -->
+		</ul>
+			<?php
+		
+			if(isset($_SESSION['usuario'])){
+
+			echo'
+
+			<div id="terminar_sesion">
+				Pulsa
+				<a href="../usuarios/unlog.php">AQUI</a>
+				para cerrar tu sesion
+			</div>
+
+			';
+
+			}
+
+			else {echo'
+
+			<div id="iniciar_sesion">
+				<a href="../formulariologin.php">Iniciar <br /> sesi&oacute;n</a>
+			</div>
+
+			';}
+
+
+			?>		
+<?php
+	}
+?>

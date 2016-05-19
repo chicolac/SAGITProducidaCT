@@ -1,0 +1,125 @@
+<?php
+		 
+	require "../mi_conexion2014/conexion.rts";
+	$bd = new BD;
+	
+	$clasificacion_base = $_POST["mi_hijo"];
+	$clasificacion_jefe = $_POST["mi_jefe"];
+	
+	$tu_padre = htmlspecialchars($clasificacion_base);
+	echo $tu_padre.'<br>';
+	
+	$tu_jefe = htmlspecialchars($clasificacion_jefe);
+	echo $tu_jefe.'<br>';
+			
+	echo ("<br />");
+    echo ("<br />");
+	
+	$ssql = "select * from incluye where cod_categ='$tu_jefe' and cod_clasif='$tu_padre';";
+	$resultado = pg_query($ssql);
+	if(pg_num_rows($resultado)!=0){
+		echo $resultado;
+	}
+	?>
+	
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+	        <title>sub-cat&aacute;logo </title>
+	        <link rel="shortcut icon" href="../imagenes/favicon.ico">
+	        <link rel="stylesheet" type="text/css" media="screen" href="../css/en_original.css"> 
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/main_principal.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/menu.css">
+		
+		<script type="text/javascript" src="../javascript/portada.js"></script>		
+
+		<link rel="stylesheet" type="text/css" href="../mi_ficha/main.css"> 
+		<link rel="STYLESHEET" type="text/css" href="../mi_ficha/estilo.css">
+
+<!-- start Mixpanel --><!-- end Mixpanel -->
+
+	</head>
+
+	<body onload="inicio()">
+		<div id="contenedor">
+			<header>
+				<?php include("../biblioteca.phtml") ?>
+				<?php cabeceraPage() ?>				
+				<nav>
+					<?php elMenu() ?>
+				</nav>
+			</header>			
+			<section>
+				<article style="height:60em; width:940px;">
+	
+					<table align="center" border="2">
+			
+						<tr>
+							<th align="center"><b>Cat&aacute;logo</b></th>				
+							<th align="center"><b>Atractivo</b></th>				
+						</tr>				
+						<?php
+			
+							while ($tupla = pg_fetch_array($resultado))
+							{
+
+						?>
+
+						<tr>
+							<td>
+								<?php 
+									$clasif = $tupla['cod_clasif'];
+									$categ = $tupla['cod_categ'];
+						
+									$ssql = "select * from clasificacion where cod_categ='$categ' and cod_clasif='$clasif';";
+									$resulsql = pg_query($ssql);
+									if(pg_num_rows($resulsql)!=0){
+										echo $resulsql;
+									}
+						
+									$registro = pg_fetch_array($resulsql);
+									$nombre_categ = $registro['nombre_cla'];
+								?>
+								<a href="catalogs/111"><?php echo $nombre_categ ?></a>
+							</td>
+							<td>
+								<?php $at = $tupla['cod_at'];
+					
+										$ssql = "select * from atractivo_turistico where cod_at=$at;";
+										$resulsql = pg_query($ssql);
+										if(pg_num_rows($resulsql)!=0){
+											echo $resulsql;
+										}
+							
+										$fila = pg_fetch_array($resulsql);
+										$nombre_at = $fila['nombre_at'];
+							
+								?>
+								<a href="/catalogs/111"><?php echo $nombre_at ?></a>
+							</td>
+							<td>
+								<FORM METHOD="POST" ACTION="la_ficha.php" name="atractivo">
+									<input type="hidden" name="id_atractivo" value="<?php echo $fila['cod_at']?>">
+									<input type="submit" value=">>VER<<">
+								</FORM>
+							</td>
+				
+						</tr>
+						<?php
+
+							}
+						?>
+					</table>
+		
+				</article>
+			</section>
+			<footer>
+				<?php piePage() ?>
+			</footer>
+		</div>
+	</body>
+</html>
+
+

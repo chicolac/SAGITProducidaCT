@@ -1,0 +1,58 @@
+<?php
+
+session_start();
+
+echo "Tu usuario es: ".$_SESSION['usuario']."<br /> Tu contraseña es: ".$_SESSION['contrasena'];
+
+$usuario = $_SESSION['usuario'];
+$contrasena = $_SESSION['contrasena'];
+
+?>
+
+
+<?php
+	$piso = $_POST['opcion_piso'];
+	$region = $_POST['opcion_reg'];
+	$municipio = $_POST['opcion_munic'];
+	
+	$atractivo = $_POST['atractivo'];
+	
+	require "../../mi_conexion2014/conexion.inc";
+	$bd = new BD;
+	
+	$consulta="select * from ubicacion where id_region=$region AND cod_mun=$municipio AND id_pisoeco=$piso;";
+	$resulsql = pg_query($consulta);
+	if(pg_num_rows($resulsql)!=0)
+	{
+		echo $resulsql;
+	}
+	
+	$fila=pg_fetch_array($resulsql);
+	$ubicacion = $fila['id_ubicacion'];
+	echo "ubicaci�n: ".$ubicacion."<br>";
+	
+	echo $piso.'<br>';
+	echo $region.'<br>';
+	echo $municipio.'<br>';
+	echo $atractivo.'<br>';
+	
+	$mi_con = "select MAX(cod_tiene) from tiene;";
+	$resulsqlcon = pg_query($mi_con);
+	
+	echo $tupla = pg_fetch_array($resulsqlcon);
+	$resulsqlcon = $tupla[max] + 1;
+    echo $resulsqlcon;
+	
+	$codigo = $resulsqlcon;
+	echo ("<br />");
+	
+	$ssql_incluir = "INSERT INTO tiene (cod_at, cod_tiene, id_ubicacion, coord_x, coord_y, coord_z) VALUES ('$atractivo', '$codigo', '$ubicacion', 0, 0, 0)";
+	$resulsql = pg_query($ssql_incluir);
+	if(pg_num_rows($resulsql)!=0){
+		echo $resulsql;
+	}
+?>
+<div id="lateralIzq">
+	" IR AL CAT&Aacute;LOGO PRINCIPAL "
+
+</div>

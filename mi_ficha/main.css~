@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+
+  background-color: #81cbf7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  margin:0 auto;
+  text-align: center;
+}
+
+#cabeza {
+	/*background-color:#cccccc;*/
+	width:910px;
+	/*padding:10px;*/
+}
+
+#nombre {
+	background-color:#efefef;
+	width:410px;
+	float:left;
+}
+
+#codigo {
+	background-color:#cccccc;
+	width:500px;
+	float:left;
+}
+
+#cuerpo {
+	background-color:#efefef;
+	height:40px;
+	width:910px;
+	/*padding:10px;*/
+}
+
+#dato {
+	background-color:#cccccc;
+	height:340px;
+	width:410px;
+	float:left;
+}
+
+#imagen {
+	background-color:#efefef;
+	height:365px;
+	width:500px;
+	float:left;
+}
+
+#detalle {
+	background-color:#cccccc;
+	clear:left;
+}
+
+#nameat {
+	background-color:yellow;
+	/*text-align: justify;*/
+	padding-left: 15pt;
+	padding-right: 15pt;
+	font-size: 17px;
+	text-align: center;
+}
+
+#descripcion {
+	background-color:yellow;
+	text-align: justify;
+	padding-left: 15pt;
+    padding-right: 15pt;
+}
+
+#sugerencia {
+	background-color:#efefef;
+	width:910px;
+}
+
+#izquierda {
+	background-color:#efefef;
+	width:410px;
+	float:left;
+}
+
+#derecha {
+	background-color:#cccccc;
+	width:500px;
+	float:left;
+}
+
+#pie {
+	background-color:#cccccc;
+	height:40px;
+	width:910px;
+	clear:left;
+}
+
+#fuente {
+	background-color:#cccccc;
+	width:410px;
+	float:left;
+}
+
+#estacionalidad {
+	background-color:#efefef;
+	width:500px;
+	float:left;
+}

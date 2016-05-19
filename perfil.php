@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html><head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+	        <title>Sitio Turismo Universidad Mayor de San Simón </title>
+	        <link rel="shortcut icon" href="imagenes/favicon.ico">
+	        <link rel="stylesheet" type="text/css" media="screen" href="css/en_original.css">
+	        <link rel="stylesheet" type="text/css" media="screen" href="css/main_principal.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/menu.css">
+		
+		<script type="text/javascript" src="javascript/portada.js"></script>
+		
+		
+
+<!-- start Mixpanel --><!-- end Mixpanel -->
+
+
+	</head>
+	<body onload="inicio()">
+		<div id="contenedor">
+			<header>
+				<?php include("biblioteca.phtml") ?>
+				<?php cabeceraPage() ?>				
+				<nav>
+					<?php elMenu() ?>
+				</nav>
+			</header>			
+			<section>
+			
+				<article style="height:80em;">
+	
+					<h1>Perfil profesional </h1>
+					<p class="pCentral">
+						Es un profesional capacitado en la planificación  y gestión turística, diseño de circuitos y recorridos, turísticos promoción turística, administración de empresas turísticas y la capacitación profesional en este ámbito.</br></br></br>
+
+						Planificación y gestión de los recursos naturales y patrimoniales con potencialidades turísticas para su puesta en valor y aprovechamiento sostenible. (Planificador turístico) </br></br>
+						Diseño, evaluación y administración de proyectos y servicios turísticos. (Administrador de servicios turísticos) </br></br>
+						Capacidad de gestión y manejo para desarrollar proyectos y empresas que busquen el fortalecimiento de la actividad turística del país. (Planificador de emprendimientos turísticos) </br></br>
+						Promoción del patrimonio natural y cultural turístico en Bolivia. (Promotor de emprendimientos turísticos)
+					</p>
+
+				</article>
+			</section>
+			<footer>
+				<?php piePage() ?>
+			</footer>
+		</div>
+	</body>
+</html>

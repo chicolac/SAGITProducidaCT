@@ -1,0 +1,58 @@
+lo q pasa es q al volver de algunos formularios nos pide actualizar la pagina
+******* las paginas despues de registrar el atractivo turistico esta sin formato
+******* No se puede ver el atractivo desde el link de municipios, no puedo ver si se colgó bein!!
+******* Mis paginas de registro me estan mostrando, unos errores feos de inicio de sesion
+******* En la pagina de confirmacion de registro del nombre de la nueva categoria tengo implementado el nombre de la clasificacion padre y su categoria para ver donde se esta creando el hijo
+******* al momento de registrar lo q son las nuevas clasificaciones, solo me muestra el codigo de la clasificacion y de la categoria del padre y no su nombre
+******* el formulario de crear subcatalogos me muestra a los hermanos pero todavia no al padre
+******* EN LOS CATALOGOS DEL NIVEL no muestro el nombre del catalogo superior solo su codigo
+
+mis formularios de registro siguen teniendo basura "esos mensajes x ejemplo MI PAPA, su categoria"
+
+******* EN EL MENU DEL ADMINISTRADOR, esta la opcion para colgar los atractivos turisticos a la base de datos, con la fotito y nos permite COLOCARLA EN UN MUNICIPIO DE COCHA
+
+
+Me falta en las clasificaciones colocar la cantidad de atractivos turisticos que hay dentro de una determinadad clasificacion (q resalte)
+
+notengoelmodoedición de atractivo        
+
+******* dESPUES QUE ENTRO A una subcarpeta dentro de mi raiz y luego quiero utilizar el menu de opciones ninguna de la opciones me sirve YA Q MAL
+
+ESTO YA LO ESCRIBI LO SE que cada subcategoria me muestre cuantos atractivos turisticos tiene dentro(entre parentesis), y si se puede el boton #ver atractivos# se bloquee
+
+******* Colocar un titulo en la pagina (con ayuda de lo que ya vi en el tema turismo) donde esta la lista de atractivos turisticos x categoria!!!
+
+Un titulo personalizado para la ficha del atractivo turistico(algo como FICHA DEL ATRACTIVO TURÍSTICO)
+
+LA INFORMACION A ACTUALIZAR EN LA ficha del atractivo:
+	el codigo del atractivo
+	la jerarquia (esto no lo guardo en la base de datos al crear el atractivo)
+	provincia, municipio
+	ahi arribita la clasificacion a la que pertenece
+
+SI ALGO NO PUEDES O NO SABES COMO MOSTRARLO APOYATE EN LO QUE YA TIENES EN LO YA TRABAJADO, VELOCIDAD
+
+
+
+
+
+
+a la base de datos-lunes 6 de abril.txt
+a la base de datos-lunes 6 de abril.txt
+a la base de datos-lunes 6 de abril.txt
+
+
+añadir el atributo seccion en el municipio
+	el mapa politico asociado al municipio
+y los otros datos atomicos eso no es tan dificil
+	album de fotografias del municipio(album de cuantas fotos deppende el dueño)
+		podemos sacar de los atractivos o subir especificos
+		2 opciones o subimmos una o eleginos una que este en la division politica
+
+fotografias que el municipio tenga varias fotografias
+
+para poner las fotografias del municipio
+
+PONER EL ESPACIO PARA LA JERARQUIA DEL ATRACTIVO
+
+aumentar en las clasificaciones el campo PARA VER CUANTOS ATRACTIVOS TURISTICOS HAY EN MI Y EN MIS HIJOS! un contador a actualizar

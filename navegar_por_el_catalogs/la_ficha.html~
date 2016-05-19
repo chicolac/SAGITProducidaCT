@@ -1,0 +1,289 @@
+<?php
+
+	$atractivo = $_POST['id_atractivo'];
+	echo $atractivo;
+	
+	require "../mi_conexion2014/conexion.inc";
+	$bd = new BD;
+	
+	$ssql = "select * from atractivo_turistico where cod_at=$atractivo;";
+	$resulsql = pg_query($ssql);
+	if(pg_num_rows($resulsql)!=0){
+		echo $resulsql;
+	}
+	
+	$fila = pg_fetch_array($resulsql);
+	// modificar del que copie las comillitas
+	$nombre_at = $fila['direc_foto'];
+	
+	// mover la carpeta files al root
+	echo $nombre_at;
+?>
+
+<!DOCTYPE >
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">	
+		<meta charset="utf-8">
+        <title>Sitio Turismo Universidad Mayor de San Simón </title>
+        <link rel="shortcut icon" href="1.php%20Archivos/favicon.ico"> 
+        <link rel="stylesheet" type="text/css" media="screen" href="1.php%20Archivos/main.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="1.php%20Archivos/slider.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="1.php%20Archivos/menu.css">
+		<script src="1.php%20Archivos/a" defer="defer" async="" type="text/javascript"></script><script src="1.php%20Archivos/mixpanel.js" async="" type="text/javascript"></script><script>
+			document.createElement('header');
+			document.createElement('hgroup');
+			document.createElement('nav');
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('section');
+			document.createElement('footer');
+			
+		</script>
+		<script type="text/javascript" src="asdf.js"></script>
+		
+		<style type="text/css">
+			#foto {
+			filter: alpha(opacity=100)
+			}
+			
+			.cabeza1 {
+				float:left;
+				
+			}
+			
+			.cabeza2 {
+				float:left;
+				font-family:arial, verdana, sans-serif;
+				color: white;
+				
+			}
+			
+			.cabezota {
+				padding-left:50px;
+				padding-top:10px;
+				font-family:arial, verdana, sans-serif;
+				font-size:3.2em;
+				color: white;
+				
+			}
+			
+			.cabezita {
+				padding-left:50px;
+				padding-top:12px;
+				font-family:arial, verdana, sans-serif;
+				font-size:1.2em;
+				color: white;
+				
+			}
+		</style>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(d,c){var a,b,g,e;a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===d.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';b=d.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);c._i=[];c.init=function(a,d,f){var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";g="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config".split(" ");
+for(e=0;e<g.length;e++)(function(a){b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}})(g[e]);c._i.push([a,d,f])};window.mixpanel=c})(document,[]);
+mixpanel.init("65f9d10f33f091a5cd45c02bf6da1db0");</script><!-- end Mixpanel -->
+
+	<link rel="stylesheet" type="text/css" href="mi_ficha/main.css">
+    <link rel="STYLESHEET" type="text/css" href="mi_ficha/estilo.css">
+    
+     </head>
+<body onLoad="inicio()">
+<div id="contenedor">
+<header>
+	<div class="cabeza1" > 
+		<img src="fotos/LOGO_TURISMO.jpg" name="foto" id="foto" alt="mis fotos" height="120" / > 
+	</div >
+	
+	<div class="cabeza2" > 
+		<div class="cabezita" > 
+			Facultad de Arquitectura y Ciencias del H&aacute;bitat
+		</div >
+		<div class="cabezota" > 
+			CARRERA DE TURISMO
+		</div >
+	</div >
+ 
+ </header>
+
+<nav>
+    <ul id="menu" class="topmenu"> 
+    	<li class="topfirst"><a class="pressed" href="turismo.html" title="Inicio" style="height: 18px; line-height: 18px;">Inicio </a></li><li><a href="turismo.html" title="La Carrera" style="height: 18px; line-height: 18px;"><span>La Carrera</span></a><ul><li><a href="historia.html" title="Historia">Historia</a></li><li><a href="acerca.html" title="Ex Directores">Acerca de la Carrera</a></li><li><a href="organizacion.html" title="Antecedentes Académicos">Organización administrativa</a></li></ul></li><li><a href="turismo.html" title="Informacion Academica" style="height: 18px; line-height: 18px;"><span>Informacion Academica</span></a><ul><li><a href="mod_ad.html" title=" Modalidad de Admision "> Modalidades de Admisi&oacute;n </a></li><li><a href="mod_ti.html" title=" Reglamento "> Modalidades de titulaci&oacute;n</a></li><li><a href="perfil.html" title="HORARIOS 2013  ">Perfil profesional  </a></li><li><a href="plantel.html" title="Examenes 2012 ">Plantel docente </a></li></ul></li><li><a href="publicaciones.html" title="Nuestra Biblioteca" style="height: 18px; line-height: 18px;"><span>Publicaciones</span></a></li><li class="toplast"><a href="las_noticias.html" title="Turismo" style="height: 18px; line-height: 18px;"><span>&Uacute;ltimas noticias</span></a></li><li class="toplast"><a href="turismo.html" title="Turismo" style="height: 18px; line-height: 18px;"><span>Actividades tur&iacute;sticas</span></a><ul><li><a href="turismo.html" title="Identificación Biblioteca">turismo de aventura</a></li><li><a href="turismo.html" title="Historia de la Biblioteca">canotaje y navegaci&oacute;n</a></li><li><a href="turismo.html" title="Historia de la Biblioteca">guiadas</a></li><li><a href="turismo.html" title="Historia de la Biblioteca">tracking de caminata</a></li></ul></li><li class="toplast"><a href="turismo.html" title="Información turística" style="height: 18px; line-height: 18px;"><span>Información turística</span></a><ul><li><a href="cochabamba.html" title="Identificación Biblioteca">Cochabamba</a></li><li><a href="bolivia.html" title="Historia de la Biblioteca">Bolivia</a></li></ul></li><li class="toplast"><a href="turismo.html" title="Enlaces" style="height: 18px; line-height: 18px;"><span>Apoyo docente-estudiantil</span></a><ul><li><a href="http://enlinea.umss.edu.bo/claroline/" title="Identificación Biblioteca">Claroline</a></li><li><a href="turismo.html" title="Historia de la Biblioteca">Tesis</a></li><li><a href="https://www.facebook.com/CarreraDeTurismoUMSS" title="Revista">Facebook </a></li></ul></li>    </ul>
+</nav>
+
+
+
+	<article style="height:80em; width:910px;">
+
+		<h2>Información turística de Bolivia producida por la Carrera de Turismo</h2>
+			
+			</br>
+            <div id="ficha">
+		
+        <div id="cabeza">
+        	<div id="nombre">
+            	<table width="410px" border=”1” > 
+                    <tr> 
+                        <th align="center"><b> NOMBRE DEL ATRACTIVO </b></th> 
+                    </tr> 
+                    <tr> 
+                        <td align="center"> Laguna de Huari Pukara </td> 
+                    </tr> 
+                 </table >
+            </div>
+            <div id="codigo">
+				<table width="500px" border=”1” > 
+                    <tr> 
+                        <th align="center"><b> CODIGO </b></th> 
+                        <th align="center"><b> JERARQUIA </b></th> 
+                    </tr> 
+                    <tr> 
+                        <td align="center"> 01.04.02. </td> 
+                        <td align="center"> II </td> 
+                    </tr> 
+                 </table >
+            </div>
+        </div>
+        <div id="cuerpo">
+        	<div id="dato">
+            	<table width="410px" border=”1” > 
+                    <tr> 
+                        <th align="center"><b> REFERENCIAS DE LOCALIZACION </b></th> 
+                    </tr>
+				</table >
+				<table width="410px" border=”1” > 
+                    <tr> 
+                        <td><b> PROVINCIA </b></td> 
+                        <td> Quillacollo </td> 
+                    </tr>
+                    <tr> 
+                        <td><b> MUNICIPIO </b></td> 
+                        <td> Tiquipaya </td> 
+                    </tr> 
+                    <tr> 
+                        <td><b> LUGAR </b></td> 
+                        <td> Huari Pucara </td> 
+                    </tr>
+                    <tr> 
+                        <td><b> ALTITUD </b></td> 
+                        <td> 4.200 m.s.n.m. </td> 
+                    </tr> 
+				</table >
+				<table width="410px" border=”1” > 
+                    <tr> 
+                        <th align="center"><b> ACCESIBILIDAD </b></th> 
+                    </tr>
+				</table >
+				<table width="410px" border=”1” > 
+                    <tr> 
+                        <td><b> TIPO DE VIA </b></td> 
+                        <td> Ripio </td> 
+                    </tr> 
+                    <tr> 
+                        <td><b> ESTADO DE V&Iacute;A </b></td> 
+                        <td> Malo </td> 
+                    </tr>
+				</table >
+				<table width="410px" border=”1” > 
+                    <tr> 
+                        <th align="center"><b> DISTANCIA </b></th> 
+                    </tr>
+				</table >
+				<table width="410px" border=”1” > 
+                    <tr> 
+                        <td><b> EN KMS. </b></td> 
+                        <td> 74 Km. </td> 
+                    </tr>
+                    <tr> 
+                        <td><b> DESDE: </b></td> 
+                        <td> Tiquipaya </td> 
+                    </tr> 
+                    <tr> 
+                        <td><b> EN TIEMPO </b></td> 
+                        <td> 4 Horas </td> 
+                    </tr>
+                    <tr> 
+                        <th align="center"><b> COORDENADA X </b></th>
+                        <th align="center"><b> COORDENADA Y </b></th> 
+                    </tr>
+                    <tr> 
+                        <td> 799960 </td> 
+                        <td> 8092415 </td> 
+                    </tr> 
+           		</table >
+            </div>
+            <div id="imagen">
+				<img src="mi_ficha/laguna2.jpg" width="350" height="350" border="0">
+            </div>
+        </div>
+        <div id="detalle">
+        	<table width="100%"  align="center" cellpadding="4" cellspacing="2">
+				<tr class="titulo_tabla">
+				   <th>descripcion de las caracteristicas</th>
+				</tr>
+                <tr class="titulo_tabla">
+				   <td>
+                   		<div id="descripcion">Esta laguna se encuentra al lado de Tiquipaya. Es una de las m&aacute;s grandes de la regi&oacute;n; y sirve como reservorio de agua para el ganado de la regi&oacute;n; es una de la tres lagunas comunitarias de Huari Pukara y se est&aacute; practicando la psicultura en pequeña cantidad por el momento, ya que es apta para esta actividad por la gran cantidad de nutrientes que posee, adem&aacute;s que se constituye en un excelente espejo de agua, y favorece a la riqueza paisaj&iacute;stica del lugar.</div>
+                   </td>
+				</tr>
+            </table>
+        </div>
+        <div id="sugerencia">
+        	<div id="izquierda">
+            	<table width="410px" border=”1” > 
+                    <tr> 
+                        <th align="center"><b> ACTIVIDADES TUR&Iacute;STICAS PERMITIDAS </b></th> 
+                    </tr> 
+                    <tr> 
+                        <td> Row 2, Column 1 </td> 
+                    </tr> 
+                 </table >
+            </div>
+            <div id="derecha">
+				<table width="500px" border=”1” > 
+                    <tr> 
+                        <th align="center"><b> RESTRICCIONES A LA ACTIVIDAD </b></th> 
+                    </tr> 
+                    <tr> 
+                        <td> Row 2, Column 1 </td> 
+                    </tr> 
+                 </table >
+            </div>
+        </div>
+        <div id="pie">
+        	<div id="fuente">
+            	<table width="410px" border=”1” > 
+                    <tr> 
+                        <th align="center"><b> FUENTE </b></th> 
+                    </tr> 
+                    <tr> 
+                        <td> Row 2, Column 1 </td> 
+                    </tr> 
+                 </table >
+            </div>
+            <div id="estacionalidad">
+				<table width="500px" border=”1” > 
+                    <tr> 
+                        <th align="center"><b> ESTACIONALIDAD </b></th> 
+                    </tr>
+				</table >
+				<table width="500px" border=”1” > 
+                    <tr> 
+                        <td><b> TEMPORADAS DE VISITA </b></td> 
+                        <td> Esta laguna se encuentra al lado de Tiquipaya. Es una de las m&aacute;s grandes de la regi&oacute;n; y sirve como reservorio de agua para el ganado de la regi&oacute;n; es una de la tres lagunas comunitarias de Huari Pukara y se est&aacute; practicando la psicultura en pequeña cantidad por el momento, ya que es apta para esta actividad por la gran cantidad de nutrientes que posee, adem&aacute;s que se constituye en un excelente espejo de agua, y favorece a la riqueza paisaj&iacute;stica del lugar. </td> 
+                    </tr> 
+           		</table >
+            </div>
+        </div>
+    </div>
+
+</article>
+
+<footer>
+    <p><small>© La Carrera de Turismo perteneciente a la Facultad de Arquitectura de la Universidad Mayor de San Simón! - Telf:4540438 - 
+Email:turismo@arq.umss.edu.bo</small></p>
+    <p><small>Cochabamba - Bolivia</small></p>
+<a href="http://flow.mixpanel.com/f/partner"><img src="1.php%20Archivos/badge_blue.png" alt="Mobile and Web Analytics"></a>
+</footer>
+
+</div>
+
+
+</body></html>

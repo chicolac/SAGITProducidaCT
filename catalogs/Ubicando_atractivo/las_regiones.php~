@@ -1,0 +1,82 @@
+<?php
+
+session_start();
+
+echo "Tu usuario es: ".$_SESSION['usuario']."<br /> Tu contraseña es: ".$_SESSION['contrasena'];
+
+$usuario = $_SESSION['usuario'];
+$contrasena = $_SESSION['contrasena'];
+
+?>
+
+
+<HTML>
+    <HEAD>
+        <TITLE>Título de la página</TITLE>
+        <link rel="STYLESHEET" type="text/css" href="estilo.css">
+    </HEAD>
+
+    <BODY>
+        Aquí iría el contenido de la página
+		<?php
+	
+			$municipio = $_POST["munic"];
+			$atractivo = $_POST["atractivo"];
+			echo $atractivo.'<br>';
+			//$region = $_POST["region"];
+			
+			
+			require "conexion.inc";
+			$bd = new BD;
+			
+			$rsql = "SELECT DISTINCT id_region, nom_region FROM region;";
+			$rresult = pg_query($rsql);
+			//$tupla1 = pg_fetch_array();
+			echo "La región es $municipio";
+			echo "<br>";
+		?>
+		
+			<TABLE>
+				<TR>
+					<TH>REGIONES</TH><TH>MUNICIPIOS</TH>
+				</TR>
+				<?php
+					if($rresult != "")
+					{
+						
+						while ($tupla = pg_fetch_array($rresult))
+						{
+				?>
+							<TR>
+								<TD><?php echo $tupla['nom_region'] ?></TD>
+								<TD>  
+									<form action="sus_municipios.php" method="post"  name="miform">
+										<button>
+											Un <b>botón</b>
+											<br>
+											<br>
+											haga click para VER MUNICIPIOS!
+											<hr>
+											
+											<br>
+											<img src="municipio.JPG" width="158" height="44" alt="">
+										</button>
+										<input type="hidden" name="opcion_reg" value="<?php echo $tupla['id_region'] ?>">
+										
+										<input type="hidden" name="atractivo" value="<?php echo $atractivo ?>">
+									</form>
+								</TD>
+							</TR>
+							
+							<?php
+						}
+					}
+				?>
+				
+				<input type="hidden" name="opcion" value="si">
+			</TABLE>
+
+		
+		
+    </BODY>
+</HTML>

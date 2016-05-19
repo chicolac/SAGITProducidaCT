@@ -1,0 +1,131 @@
+<!DOCTYPE >
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">	
+		<meta charset="utf-8">
+        <title>Sitio Turismo Universidad Mayor de San Simón </title>
+        <link rel="shortcut icon" href="1.php%20Archivos/favicon.ico"> 
+        <link rel="stylesheet" type="text/css" media="screen" href="1.php%20Archivos/main.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="1.php%20Archivos/slider.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="1.php%20Archivos/menu.css">
+		<script src="1.php%20Archivos/a" defer="defer" async="" type="text/javascript"></script><script src="1.php%20Archivos/mixpanel.js" async="" type="text/javascript"></script><script>
+			document.createElement('header');
+			document.createElement('hgroup');
+			document.createElement('nav');
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('section');
+			document.createElement('footer');
+			
+		</script>
+		<script type="text/javascript" src="asdf.js"></script>
+		
+		<style type="text/css">
+			#foto {
+			filter: alpha(opacity=100)
+			}
+			
+			.cabeza1 {
+				float:left;
+				
+			}
+			
+			.cabeza2 {
+				float:left;
+				font-family:arial, verdana, sans-serif;
+				color: white;
+				
+			}
+			
+			.cabezota {
+				padding-left:50px;
+				padding-top:10px;
+				font-family:arial, verdana, sans-serif;
+				font-size:3.2em;
+				color: white;
+				
+			}
+			
+			.cabezita {
+				padding-left:50px;
+				padding-top:12px;
+				font-family:arial, verdana, sans-serif;
+				font-size:1.2em;
+				color: white;
+				
+			}
+		</style>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(d,c){var a,b,g,e;a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===d.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';b=d.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);c._i=[];c.init=function(a,d,f){var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";g="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config".split(" ");
+for(e=0;e<g.length;e++)(function(a){b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}})(g[e]);c._i.push([a,d,f])};window.mixpanel=c})(document,[]);
+mixpanel.init("65f9d10f33f091a5cd45c02bf6da1db0");</script><!-- end Mixpanel -->
+
+
+     </head>
+<body onload="inicio()">
+<div id="contenedor">
+<header>
+	<div class="cabeza1" > 
+		<img src="fotos/LOGO_TURISMO.jpg" name="foto" id="foto" alt="mis fotos" height="120" / > 
+	</div >
+	
+	<div class="cabeza2" > 
+		<div class="cabezita" > 
+			Facultad de Arquitectura y Ciencias del H&aacute;bitat
+		</div >
+		<div class="cabezota" > 
+			CARRERA DE TURISMO
+		</div >
+	</div >
+ 
+ </header>
+
+<nav>
+    <ul id="menu" class="topmenu"> 
+    	<li class="topfirst"><a class="pressed" href="turismo.html" title="Inicio" style="height: 18px; line-height: 18px;">Inicio </a></li><li><a href="turismo.html" title="La Carrera" style="height: 18px; line-height: 18px;"><span>La Carrera</span></a><ul><li><a href="historia.html" title="Historia">Historia</a></li><li><a href="acerca.html" title="Ex Directores">Acerca de la Carrera</a></li><li><a href="organizacion.html" title="Antecedentes Académicos">Organización administrativa</a></li></ul></li><li><a href="turismo.html" title="Informacion Academica" style="height: 18px; line-height: 18px;"><span>Informacion Academica</span></a><ul><li><a href="mod_ad.html" title=" Modalidad de Admision "> Modalidades de Admisi&oacute;n </a></li><li><a href="mod_ti.html" title=" Reglamento "> Modalidades de titulaci&oacute;n</a></li><li><a href="perfil.html" title="HORARIOS 2013  ">Perfil profesional  </a></li><li><a href="plantel.html" title="Examenes 2012 ">Plantel docente </a></li></ul></li><li><a href="publicaciones.html" title="Nuestra Biblioteca" style="height: 18px; line-height: 18px;"><span>Publicaciones</span></a></li><li class="toplast"><a href="las_noticias.html" title="Turismo" style="height: 18px; line-height: 18px;"><span>&Uacute;ltimas noticias</span></a></li><li class="toplast"><a href="turismo.html" title="Turismo" style="height: 18px; line-height: 18px;"><span>Actividades tur&iacute;sticas</span></a><ul><li><a href="turismo.html" title="Identificación Biblioteca">turismo de aventura</a></li><li><a href="turismo.html" title="Historia de la Biblioteca">canotaje y navegaci&oacute;n</a></li><li><a href="turismo.html" title="Historia de la Biblioteca">guiadas</a></li><li><a href="turismo.html" title="Historia de la Biblioteca">tracking de caminata</a></li></ul></li><li class="toplast"><a href="turismo.html" title="Información turística" style="height: 18px; line-height: 18px;"><span>Información turística</span></a><ul><li><a href="cochabamba.html" title="Identificación Biblioteca">Cochabamba</a></li><li><a href="bolivia.html" title="Historia de la Biblioteca">Bolivia</a></li></ul></li><li class="toplast"><a href="turismo.html" title="Enlaces" style="height: 18px; line-height: 18px;"><span>Apoyo docente-estudiantil</span></a><ul><li><a href="http://enlinea.umss.edu.bo/claroline/" title="Identificación Biblioteca">Claroline</a></li><li><a href="turismo.html" title="Historia de la Biblioteca">Tesis</a></li><li><a href="https://www.facebook.com/CarreraDeTurismoUMSS" title="Revista">Facebook </a></li></ul></li>    </ul>
+</nav>
+
+
+
+	<article style="height:80em; width:910px;">
+
+
+<h1>Historia de la carrera</h1>
+<p class="pCentral"> 
+La idea de crear la Carrera de Turismo nace a partir de la iniciativa de la Facultad de Arquitectura, cuando se establece la necesidad de generar el área de ciencias del hábitat, que debe incorporar en su interior todas las disciplinas que estudian los espacios utilizados por el hombre y las realizaciones producto de su cultura.
+</br></br>
+El turismo, además de incorporarse como justificación en este grupo disciplinario, tiene como característica principal el aporte al desarrollo sustentable, a la generación de una dinámica de varios campos de la actividad económica, al intercambio cultural entre diferentes países, entre otros atributos.
+</br></br>
+En 1979 y 1996 nace la idea de crear la Carrera de Turismo en las Sectoriales de Facultades de Arquitectura del Sistema de la Universidad Boliviana. </br></br>
+El 3 de diciembre del 1997, por acuerdo académico Nº AC – H G H 64/97 se crea el Programa de Formación Profesional en Turismo </br></br>
+En 1998 Inicia actividades académicas con el siguiente plantel docente: </br></br>
+Jefe de departamento: Arq. Antonio Calvimonte Sulfo </br>
+Dr. Gilberto Rojas J. </br>
+Dr. Rolando Pacheco M. </br>
+Dra. Rosalia Sejas L. </br>
+Arq. Brownie Mostajo Medinacelly </br>
+Lic. Marcela Aguilar Chavarria </br>
+Lic. Maria Eugenia Irigoyen </br>
+Lic. Martha Ruth Montaño Aguilar. </br>
+Lic. Raquel Boutier de Zuleta </br>
+Lic. Maria Soledad Valenzuela </br>
+Arq. Rolando Salamanca </br></br>
+En el año 2002, La Dirección de Planificación Académica establece los requisitos necesarios para transformar un programa en carrera 
+En el año 2003, por Resolución Decanal Nº 45/03, ad referéndum se acepta la transformación del Programa de Turismo en carrera. </br></br>
+El Acuerdo Técnico Nº 26/03 solicita al Comité Académico determinar la aprobación de la transformación de referencia como unidad académica administrativa, así como determinar la pertinencia o no del proceso de homologación de la titularidad de docentes a fin de constituir el gobierno de carrera y Consejo Facultativo 
+El Comité Académico del H. Consejo Universitario, aprueba el acuerdo técnico 26/03 de la DPA, Transformación del programa de turismo en carrera de Turismo, dependiente transitoriamente de La Facultad de Arquitectura. </br></br>
+El H. Consejo Universitario, determina aprobar el acuerdo académico CA – HCU – 18/03 de 5 de septiembre 2003.</p>
+
+
+</article>
+
+<footer>
+    <p><small>© La Carrera de Turismo perteneciente a la Facultad de Arquitectura de la Universidad Mayor de San Simón! - Telf:4540438 - 
+Email:turismo@arq.umss.edu.bo</small></p>
+    <p><small>Cochabamba - Bolivia</small></p>
+<a href="http://flow.mixpanel.com/f/partner"><img src="1.php%20Archivos/badge_blue.png" alt="Mobile and Web Analytics"></a>
+</footer>
+
+</div>
+
+
+</body></html>

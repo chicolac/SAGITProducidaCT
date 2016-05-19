@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sitio Turismo Universidad Mayor de San Simón </title>
+
+		<?php include("biblioteca.phtml") ?>
+		<?php estilo() ?>
+		
+<!-- start Mixpanel --><!-- end Mixpanel -->
+
+	</head>
+	<body onload="inicio()">
+		<div id="contenedor">
+			<header>
+				<?php cabeceraPage() ?>				
+				<nav>
+					<?php elMenu() ?>
+				</nav>
+			</header>			
+			<section>
+			
+				<article>
+
+					<h2>Publicaciones</h2>
+						</br></br></br>
+			
+						<div style="text-align: center;">
+							<table class="category">
+										<thead>
+									<tr>
+										<th id="tableOrdering" class="list-title">
+											<a title="Haga clic para ordenar en esta columna." onClick="Joomla.tableOrdering('a.title','asc','');return false;" href="#">Título</a>				</th>
+
+							
+														<th id="tableOrdering3" class="list-author">
+											<a title="Haga clic para ordenar en esta columna." onClick="Joomla.tableOrdering('author','asc','');return false;" href="#">Autor</a>				</th>
+							
+														<th id="tableOrdering4" class="list-hits">
+											<a title="Haga clic para ordenar en esta columna." onClick="Joomla.tableOrdering('a.hits','asc','');return false;" href="#">Impactos</a>				</th>
+													</tr>
+								</thead>
+					
+								<tbody>
+
+															<tr class="cat-list-row0">
+										
+											<td class="list-title">
+												<a href="publi_tec.php">
+													La Tecnología Wi-Fi es peligrosa para la salud?</a>
+
+																	</td>
+
+								
+																<td class="list-author">
+																							
+																					Escrito por Lía Mardy Terceros Rojas																		</td>
+								
+																<td class="list-hits">
+												197					</td>
+								
+														</tr>
+															<tr class="cat-list-row1">
+										
+											<td class="list-title">
+												<a href="publi_conta.php">
+													Contaminación y efectos nocivos en el Parque Nacional Tunari</a>
+
+																	</td>
+
+								
+																<td class="list-author">
+																							
+																					Escrito por Lía Mardy Terceros Rojas																		</td>
+								
+																<td class="list-hits">
+												226					</td>
+								
+														</tr>
+															<tr class="cat-list-row0">
+										
+											<td class="list-title">
+												<a href="publi_historia.php">
+													La Historia Oculta del Potosí Colonial (Resumen)</a>
+
+																	</td>
+
+								
+																<td class="list-author">
+																							
+																					Escrito por Franz Gustavo Morales Méndez																		</td>
+								
+																<td class="list-hits">
+												331					</td>
+								
+														</tr>
+															<tr class="cat-list-row1">
+										
+											<td class="list-title">
+												<a href="publi_prestado.php">
+													Héroes Prestados (Resumen)</a>
+
+																	</td>
+
+								
+																<td class="list-author">
+																							
+																					Escrito por Franz Gustavo Morales Méndez																		</td>
+								
+																<td class="list-hits">
+												119					</td>
+								
+														</tr>
+															<tr class="cat-list-row0">
+										
+											<td class="list-title">
+												<a href="publi_indepen.php">
+													Historia de la Independiencia de Boliva (Resumen)</a>
+
+																	</td>
+
+								
+																<td class="list-author">
+																							
+																					Escrito por Franz Gustavo Morales Méndez																		</td>
+								
+																<td class="list-hits">
+												266					</td>
+								
+														</tr>
+															<tr class="cat-list-row1">
+										
+											<td class="list-title">
+												<a href="publi_turismo.php">
+													Historia del Turismo en Bolivia (Resumen)</a>
+
+																	</td>
+
+								
+																<td class="list-author">
+																							
+																					Escrito por Franz Gustavo Morales Méndez																		</td>
+								
+																<td class="list-hits">
+												820					</td>
+								
+														</tr>
+											<tr class="cat-list-row1">
+										
+											<td class="list-title">
+												<a href="documentos/TURISMO_SUSTENTABLE.pdf">
+													TURISMO SUSTENTABLE DEL PARQUE NACIONAL TUNARI</a>
+
+																	</td>
+
+								
+																<td class="list-author">
+																							
+																					Escrito por Lía Mardy Terceros Rojas																		</td>
+								
+																<td class="list-hits">
+												620					</td>
+								
+														</tr>
+										</tbody>
+							</table>
+						</div>
+
+				</article>
+			</section>
+			<footer>
+				<?php piePage() ?>
+			</footer>
+		</div>
+	</body>
+</html>
+

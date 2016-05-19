@@ -1,0 +1,82 @@
+<?php
+
+session_start();
+
+echo "Tu usuario es: ".$_SESSION['usuario']."<br /> Tu contraseña es: ".$_SESSION['contrasena'];
+
+$usuario = $_SESSION['usuario'];
+$contrasena = $_SESSION['contrasena'];
+
+?>
+
+
+<HTML>
+    <HEAD>
+        <TITLE>T�tulo de la p�gina</TITLE>
+        <link rel="STYLESHEET" type="text/css" href="estilo.css">
+    </HEAD>
+
+    <BODY>
+        Aqu� ir�a el contenido de la p�gina
+		<?php
+	
+			//$municipio = $_POST["munic"];
+			$atractivo = $_POST["atractivo"];
+			echo $atractivo.'<br>';
+			//$region = $_POST["region"];
+			
+			
+			require "../../mi_conexion2014/conexion.inc";
+			$bd = new BD;
+			
+			$rsql = "SELECT DISTINCT cod_mun, nombre_mun FROM municipio;";
+			$rresult = pg_query($rsql);
+			//$tupla1 = pg_fetch_array();
+			//echo "El municipio es $municipio";
+			echo "<br>";
+		?>
+		
+			<TABLE>
+				<TR>
+					<TH>MUNICIPIOS</TH>...<TH>REGIONES</TH>
+				</TR>
+				<?php
+					if($rresult != "")
+					{
+						
+						while ($tupla = pg_fetch_array($rresult))
+						{
+				?>
+							<TR>
+								<TD><?php echo $tupla['nombre_mun'] ?></TD>
+								<TD>  
+									<form action="sus_regiones.php" method="post"  name="miform">
+										<button>
+											Un <b>bot�n</b>
+											<br>
+											<br>
+											haga click para ver las regiones!
+											<hr>
+											
+											<br>
+											<img src="Region.GIF" width="156" height="90" alt="">
+										</button>
+										<input type="hidden" name="opcion_munic" value="<?php echo $tupla['cod_mun'] ?>">
+										
+										<input type="hidden" name="atractivo" value="<?php echo $atractivo ?>">
+									</form>
+								</TD>
+							</TR>
+							
+							<?php
+						}
+					}
+				?>
+				
+				<input type="hidden" name="opcion" value="si">
+			</TABLE>
+
+		
+		
+    </BODY>
+</HTML>

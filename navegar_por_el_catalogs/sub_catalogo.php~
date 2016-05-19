@@ -1,0 +1,111 @@
+<?php
+		 
+	require "../mi_conexion2014/conexion.rts";
+	$bd = new BD;
+	$soy_tu_padre = $_POST["catalogs"];
+	
+
+	$tu_padre = htmlspecialchars($soy_tu_padre);
+	echo $tu_padre.'<br>';
+	
+	
+	$ssql = "select * from clasificacion where cla_cod_clasif = '$tu_padre';";
+	$resultado = pg_query($ssql);
+	if(pg_num_rows($resultado)!=0){
+		echo $resultado;
+	}
+?>
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+	        <title>sub-cat�logo </title>
+	        <link rel="shortcut icon" href="../imagenes/favicon.ico">
+	        <link rel="stylesheet" type="text/css" media="screen" href="../css/en_original.css"> 
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/main_principal.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/menu.css">
+		
+		<script type="text/javascript" src="../javascript/portada.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="../mi_ficha/main.css"> 
+		<link rel="STYLESHEET" type="text/css" href="../mi_ficha/estilo.css">
+
+<!-- start Mixpanel --><!-- end Mixpanel -->
+
+
+	</head>
+	<body onload="inicio()">
+		<div id="contenedor">
+			<header>
+				<?php include("../biblioteca.phtml") ?>
+				<?php cabeceraPage() ?>				
+				<nav>
+					<?php elMenu() ?>
+				</nav>
+			</header>			
+			<section>
+			
+				<article style="height:60em; width:940px;">
+		
+		<div id="lateralIzq">
+			<a  href="catalogo.php"><input type="button" value=" VOLVER AL CAT&Aacute;LOGO PRINCIPAL "></a>
+
+		</div>
+	
+		<table align="center" border="2">
+			
+			<tr>
+				<th align="center"><b>Los cat&aacute;logos del primer nivel: </b></th>				
+				<td>
+					XYZ
+				</td>
+			</tr>				
+			<?php
+			
+				while ($tupla = pg_fetch_array($resultado))
+				{
+
+			?>
+			
+			<tr>
+				<td>
+					<a href="/catalogs/111"><?php echo $tupla['nombre_cla'] ?></a>
+				</td>
+				<td>
+					<form action="sub_catalogo.php" method="post">
+						<input type="hidden" name="catalogs" value="<?php echo $tupla['cod_clasif'] ?>">
+						<input type="submit" value="Mostrar" />
+					</form>
+				</td>
+				<td>
+					<form action="ver_atrac.php" method="post">
+						<input type="hidden" name="mi_hijo" value="<?php echo $tupla['cod_clasif'] ?>">
+						<input type="hidden" name="mi_jefe" value="<?php echo $tupla['cod_categ'] ?>">
+						<input type="submit" value="ver atractivos" />
+					</form>
+				</td>
+			</tr>
+			
+			<?php
+			
+				}
+			?>
+			<tr >
+				<th >
+					<input type=button value="[ REGRESAR A LA P&Aacute;GINA ANTERIOR ]" onclick="history.go(-1)">
+				</th>
+			</tr>
+		</table>
+		
+</article>
+			</section>
+			<footer>
+				<?php piePage() ?>
+			</footer>
+		</div>
+	</body>
+</html>
+
+

@@ -1,0 +1,137 @@
+<HTML>
+    <HEAD>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- start Mixpanel -->
+	<title>Sitio Turismo Universidad Mayor de San Simón </title>
+	<link rel="shortcut icon" href="imagenes/favicon.ico">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/en_original.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main_principal.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/menu.css">
+
+	<script type="text/javascript" src="javascript/portada.js"></script>
+	<!-- end Mixpanel -->
+        <link rel="STYLESHEET" type="text/css" href="css/estilo-left.css">
+        
+        <script type="text/javascript" src="javascript/jquery-2.1.0.js"></script>
+        <script type="text/javascript" src="javascript/filtro.js"></script>
+    </HEAD>
+
+    <BODY>
+	
+        <?php
+
+                require "mi_conexion2014/conexion.rts";
+                $bd = new BD;
+
+                function lista_desplegable($id, $nombre, $tabla)
+                {
+                        $consulta = "SELECT DISTINCT t.".$id.", t.".$nombre." FROM ".$tabla." as t;";
+                        echo $consulta;
+                        return pg_exec($consulta);
+
+                }
+
+        ?>
+	
+	<div id="contenedor">
+		<header>
+			<?php include("biblioteca.phtml") ?>
+			<?php cabeceraPage() ?>				
+			<nav>
+				<?php elMenu() ?>
+			</nav>
+		</header>			
+		<section>
+		
+			<article style="height:85em; width:940px;">
+
+				<h2>Información turística de Cochabamba por municipio</h2>
+
+				<p><input type="text" id="search_string" placeholder="municipio.." /></p>
+		
+				<TABLE id="municipios">
+					<tr>
+						<th>PROVINCIA</th>
+						<th>MUNICIPIO</th>
+						<th>información turística</th>
+					</tr>
+
+					<?php 
+					?>
+			
+					<?php
+						//$resultado = lista_desplegable('id_pisoeco', 'nom_pisoeco', 'piso_ecologico');
+						$consulta = "SELECT DISTINCT cod_municipio, cod_provincia, nombre_mun, descripcion_mun FROM municipio;";
+						$resultado = pg_exec($consulta);
+
+						echo "<br>";
+
+						echo $resultado;
+
+					?>
+
+					<?php
+						$counter=0;
+
+						while ($tupla = pg_fetch_array($resultado))
+						{
+							echo "<tr>";
+							// en checkbox debemos guardar el id
+							if ($counter % 2 == 0)
+								$suave = 'suave';
+							else
+								$suave = 'oscuro';
+					?>
+
+						<td >
+						        <div id= "<?php echo $suave ?>" >
+						                <?php 
+						                        $municipio = utf8_encode($tupla['cod_municipio']);
+									if ($municipio != "")
+						                        {
+										$consultaP = "SELECT nombre_provincia FROM provincia p, municipio m WHERE p.cod_provincia = m.cod_provincia AND m.cod_municipio = $municipio;";
+										$resultadoP = pg_exec($consultaP);
+										$tuplaP = pg_fetch_array($resultadoP);
+										//echo utf8_encode($tuplaP['nombre_provincia']);
+										echo $tuplaP['nombre_provincia'];
+						                        }else{ echo "( Vac&iacute;o )"; }
+					
+						                ?>
+						        </div>
+						</td>
+						<td class="nombre">
+						        <div id= "<?php echo $suave ?>" >
+						                <?php 
+									if ($municipio != "")
+						                        {
+										//$municipio = utf8_encode($tupla['cod_municipio']);
+										$consultaM = "SELECT nombre_mun FROM municipio WHERE cod_municipio = $municipio;";
+										$resultadoM = pg_exec($consultaM);
+										$tuplaM = pg_fetch_array($resultadoM);
+										//echo utf8_encode($tuplaM['nombre_mun']);
+										echo $tuplaM['nombre_mun'];
+									}else{ echo "( Vac&iacute;o )"; }
+						                ?>
+						        </div>
+						</td>
+						<td>
+							<a href='pocona.php?codigo_municipio=<?php echo $tupla['cod_municipio'] ?>' style="color:brown; text-align:center;"><----- ver -----></a>
+						</td>
+		
+				<?php
+					$counter++;
+					echo "</tr>";
+
+					}
+
+				?>
+				</TABLE>
+				</article>
+			</section>
+			<footer>
+				<?php piePage() ?>
+			</footer>
+		</div>
+	</body>
+</html>
+
